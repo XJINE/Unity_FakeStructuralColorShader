@@ -41,8 +41,8 @@ Shader "Custom/FakeStructuralColor"
 
         void surf (Input i, inout SurfaceOutputStandard o)
         {
-            float4 color    = tex2D (_MainTex, i.uv_MainTex) * _Color;
-            float  dotNV    = dot(i.worldNormal, i.viewDir);
+            float4 color = tex2D (_MainTex, i.uv_MainTex) * _Color;
+            float  dotNV = dot(i.worldNormal, i.viewDir);
 
             float sinR = sin(_SinROffset + _SinCycle * dotNV) * dotNV;
             float sinG = sin(_SinGOffset + _SinCycle * dotNV) * dotNV;
